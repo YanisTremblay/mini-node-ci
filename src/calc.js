@@ -1,17 +1,9 @@
 export const calc = {
-add: (a, b) => {
-return a + b;
-},
-sub: (a, b) => {
-const tmp = a - b; // variable non utilisée (no-unused-vars)
-return a - b
-},
-mul: (a, b) => {
-if (a == 0) return 0 // "==" au lieu de "===" (eqeqeq)
-return a * b
-},
+add: (a, b) => a + b,
+sub: (a, b) => a - b,
+mul: (a, b) => a * b,
 div: (a, b) => {
-if (b === 0) throw new RangeError("Division by zero")
-return a / b
-}
-}
+if (b === 0) throw new RangeError('Division by zero');
+return a / b;
+},
+};
